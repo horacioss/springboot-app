@@ -1,0 +1,31 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=MySQLBDD;user=horacioss;password=12345;encrypt=true;trustServerCertificate=true;loginTimeout=30;
+#    username: horacioss
+#    password: 12345
+#    encrypt: true
+#    trustServerCertificate: true
+#    loginTimeout: 30
+#    trustStore: C:\Program Files\Java\jdk-17.0.4.1\lib\security\cacerts
+#    trustStorePassword: changeit
+
+    application:
+      name: cppmsaelectronic
+      jpa:
+        show-sql: true
+        hibernate:
+          ddl-auto: none
+          dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+server:
+  port : 8081
+  servlet:
+    context-path: /api/store
+
+management:
+  security:
+    enabled: false
